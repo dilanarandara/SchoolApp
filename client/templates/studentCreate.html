@@ -1,27 +1,27 @@
 <template name="studentCreate">
-    <form class="form-horizontal">
-        <div class="form-group" name="studentCreateForm">
+    <form class="form-horizontal" name="studentCreateForm">
+        <div class="form-group">
             <label for="firstName" class="col-sm-2 control-label">Fisrt Name</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control" id="firstName" placeholder="Fisrt Name">
+                <input type="text" class="form-control" name="firstName" placeholder="Fisrt Name" required/>
             </div>
         </div>
         <div class="form-group">
             <label for="lastName" class="col-sm-2 control-label">Last Name</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control" id="lastName" placeholder="Last Name">
+                <input type="text" class="form-control" name="lastName" placeholder="Last Name" required/>
             </div>
         </div>
         <div class="form-group">
             <label for="email" class="col-sm-2 control-label">Email</label>
             <div class="col-sm-10">
-                <input type="email" class="form-control" id="email" placeholder="Email">
+                <input type="email" class="form-control" name="email" placeholder="Email" required/>
             </div>
         </div>
         <div class="form-group">
             <label for="age" class="col-sm-2 control-label">Age</label>
             <div class="col-sm-10">
-                <input type="number" class="form-control" id="age" placeholder="Age">
+                <input type="number" class="form-control" name="age" placeholder="Age" required/>
             </div>
         </div>
         <div class="form-group">

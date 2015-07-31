@@ -1,0 +1,8 @@
+input.error {
+    background-color: #FFE6E6;
+    border-color: #FFB2B2;
+}
+
+.form-group label.error {
+    color: #FF704D;
+}
