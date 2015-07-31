@@ -9,3 +9,4 @@ autopublish
 insecure
 twbs:bootstrap
 themeteorchef:jquery-validation
+iron:router

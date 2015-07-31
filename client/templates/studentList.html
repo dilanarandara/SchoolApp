@@ -1,22 +1,24 @@
 <template name="studentList">
-    <table class="table table-hover">
-        <thead>
-            <tr>
-                <th>First Name</th>
-                <th>Last Name</th>
-                <th>Email</th>
-                <th>Age</th>
-            </tr>
-        </thead>
-        <tbody>
-        	{{#each students}}
-        	<tr>
-        		<td>{{firstName}}</td>
-        		<td>{{lastName}}</td>
-        		<td>{{email}}</td>
-        		<td>{{age}}</td>
-        	</tr>
-        	{{/each}}
-        </tbody>
-    </table>
+    <div class="col-md-10 col-md-offset-1">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Email</th>
+                    <th>Age</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each students}}
+                <tr>
+                    <td>{{firstName}}</td>
+                    <td>{{lastName}}</td>
+                    <td>{{email}}</td>
+                    <td>{{age}}</td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
 </template>
