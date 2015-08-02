@@ -10,3 +10,4 @@ insecure
 twbs:bootstrap
 themeteorchef:jquery-validation
 iron:router
+accounts-password

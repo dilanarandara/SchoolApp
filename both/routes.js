@@ -15,6 +15,26 @@ Router.map(function() {
 
 	this.route('createStudent', {
 		path: '/students/create',
-		template: 'studentCreate'
+		template: 'studentCreate',
+		onBeforeAction: function() {
+			var currentUser = Meteor.userId();
+			if (currentUser) {
+				this.next();
+			} else {
+				this.render('signIn');
+			}
+		}
 	});
+
+	this.route('signin', {
+		path: '/signin',
+		template: 'signIn'
+	});
+
+	this.route('signup', {
+		path: '/signup',
+		template: 'signUp'
+	});
+
+
 });
