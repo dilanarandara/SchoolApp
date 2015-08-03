@@ -1,5 +1,6 @@
 Router.configure({
-	layoutTemplate: 'main'
+	layoutTemplate: 'main',
+	loadingTemplate: 'loading'
 });
 
 Router.map(function() {
@@ -10,7 +11,10 @@ Router.map(function() {
 
 	this.route('students', {
 		path: '/students',
-		template: 'studentList'
+		template: 'studentList',
+		waitOn: function() {
+			return Meteor.subscribe('Students');
+		}
 	});
 
 	this.route('createStudent', {
@@ -29,10 +33,14 @@ Router.map(function() {
 	this.route('studentDetails', {
 		path: '/students/:_id',
 		template: 'studentDetails',
-		data : function(){
+		waitOn: function() {
+			return Meteor.subscribe('Students');
+		},
+		data: function() {
 			var studentId = this.params._id;
-			console.log(Students.findOne({_id : studentId}));
-			return Students.findOne({_id : studentId});
+			return Students.findOne({
+				_id: studentId
+			});
 		}
 	});
 
