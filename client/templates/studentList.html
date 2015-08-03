@@ -3,8 +3,7 @@
         <table class="table table-hover">
             <thead>
                 <tr>
-                    <th>First Name</th>
-                    <th>Last Name</th>
+                    <th>Full Name</th>
                     <th>Email</th>
                     <th>Age</th>
                 </tr>
@@ -12,8 +11,7 @@
             <tbody>
                 {{#each students}}
                 <tr>
-                    <td>{{firstName}}</td>
-                    <td>{{lastName}}</td>
+                    <td><a href="{{pathFor route='studentDetails'}}">{{firstName}} {{lastName}}</a></td>
                     <td>{{email}}</td>
                     <td>{{age}}</td>
                 </tr>

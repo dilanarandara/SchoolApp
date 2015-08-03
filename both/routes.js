@@ -26,6 +26,16 @@ Router.map(function() {
 		}
 	});
 
+	this.route('studentDetails', {
+		path: '/students/:_id',
+		template: 'studentDetails',
+		data : function(){
+			var studentId = this.params._id;
+			console.log(Students.findOne({_id : studentId}));
+			return Students.findOne({_id : studentId});
+		}
+	});
+
 	this.route('signin', {
 		path: '/signin',
 		template: 'signIn'
